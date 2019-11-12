@@ -10,10 +10,10 @@
 
 function billies_socket_add_files () {
   wp_enqueue_style('css-billies-socket-base', plugins_url('css/billiesSocket.base.css', __FILe__));
-  // wp_enqueue_script('js-socket-io', 'http://billieschatcorner.herokuapp.com/socket.io/socket.io.js', array('jquery'), false, false );
-  wp_enqueue_script('js-socket-io', 'http://localhost:3000/socket.io/socket.io.js', array('jquery'), false, false );
+  wp_enqueue_script('js-socket-io', 'http://billieschatcorner.herokuapp.com/socket.io/socket.io.js', array(), false, false );
+  // wp_enqueue_script('js-socket-io', 'http://localhost:3000/socket.io/socket.io.js', array(), false, false );
 
-  wp_enqueue_script('js-billies-socket-XX', plugins_url('js/billiesSocket.XX.js', __FILE__), array('jquery') ,false, true);
+  wp_enqueue_script('js-billies-socket-connect', plugins_url('js/billiesSocket.connect.js', __FILE__), array('jquery') ,false, true);
 }
 add_action('wp_enqueue_scripts', 'billies_socket_add_files');
 
