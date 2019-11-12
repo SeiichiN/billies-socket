@@ -10,8 +10,8 @@
 
 function billies_socket_add_files () {
   wp_enqueue_style('css-billies-socket-base', plugins_url('css/billiesSocket.base.css', __FILe__));
-  wp_enqueue_style('js-socket-io', 'http://localhost:3000/socket.io.socket.io.js', array('jquery'), false, false );
-  wp_enqueue_script('js-billies-socket-XX', plugins_url('js/billiesSocket.XX.js', __FILE__), array('jquery') ,false, false);
+  // wp_enqueue_style('js-socket-io', 'http://localhost:3000/socket.io/socket.io.js', array('jquery'), false, false );
+  wp_enqueue_script('js-billies-socket-XX', plugins_url('js/billiesSocket.XX.js', __FILE__), array() ,false, false);
 }
 add_action('wp_enqueue_scripts', 'billies_socket_add_files');
 
@@ -19,11 +19,11 @@ function billies_socket_shell () {
 
   ob_start();
   ?>
-  <div id="billies-socket">
+  <div id="billiesSocket">
     <h1>Socketの練習</h1>
-    <div class="billies-socket-body">
-    </div><!-- .billies-socket-body -->
-  </div><!-- #billies-socket -->
+    <div class="billiesSocket-body">
+    </div><!-- .billiesSocket-body -->
+  </div><!-- #billiesSocket -->
   
 <?php
 return ob_get_clean();
